@@ -24,4 +24,19 @@ export default defineConfig({
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
   },
+  
+  optimizeDeps: {
+		esbuildOptions: {
+			supported: {
+				bigint: true
+			},
+			define: {
+				global: 'globalThis'
+			}
+		}
+	},
+	define: {
+		"process.env": {}
+	},
+
 });
