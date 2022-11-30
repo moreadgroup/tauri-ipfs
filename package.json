@@ -13,6 +13,7 @@
     "build:ipfs": "esbuild ./node_modules/ipfs-core --bundle --format=esm --sourcemap --main-fields=browser,module,main --inject:./src/node-globals.js --define:globalThis.process.env.NODE_ENV='\"production\"' --splitting --outdir=./src/modules/ipfs-core"
   },
   "dependencies": {
+    "@libp2p/websockets": "^5.0.0",
     "@tauri-apps/api": "^1.2.0",
     "buffer": "^6.0.3",
     "ipfs-core": "^0.17.0",
